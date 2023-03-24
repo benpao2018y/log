@@ -1,3 +1,14 @@
+# 依赖:
+```xml
+<dependency>
+    <groupId>com.sun</groupId>
+    <artifactId>tools</artifactId>
+    <version>1.8</version>
+    <scope>system</scope>
+    <systemPath>${java.home}/../lib/tools.jar</systemPath>
+</dependency>
+```
+
 # 插件参数配置
 - ALogFileSrc：编译时的日志输出路径,可以不设置,不设置就不输出
 - ASrcRootDir：项目源文件跟目录,最好设置,不设置可能会在某些极端情况下造成编译时信息丢失
