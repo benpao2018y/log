@@ -59,6 +59,7 @@ public class PBPropertyNode extends PBClassNodeInnerNode implements PIBProperty
     protected void parse(JCTree jcTree)
     {
         PBInnerNode parentNode = belongJCCompilationUnitCompiler.findParentNode(jcTree);
+
         if (parentNode == this)
         {
             if (jcTree instanceof JCTree.JCClassDecl)

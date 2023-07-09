@@ -5,39 +5,47 @@ public interface IBLog
 {
     static void debug(Object msg)
     {
-        throw new UnsupportedOperationException();
+        UnsupportedOperationException unsupportedOperationException = new UnsupportedOperationException("不支持!");
+        unsupportedOperationException.printStackTrace();
     }
 
     static void info(Object msg)
     {
-        throw new UnsupportedOperationException();
+        UnsupportedOperationException unsupportedOperationException = new UnsupportedOperationException("不支持!");
+        unsupportedOperationException.printStackTrace();
     }
 
     static void error(Object msg)
     {
-        throw new UnsupportedOperationException();
+        UnsupportedOperationException unsupportedOperationException = new UnsupportedOperationException("不支持!");
+        unsupportedOperationException.printStackTrace();
     }
 
     static void warn(Object msg)
     {
-        throw new UnsupportedOperationException();
+        UnsupportedOperationException unsupportedOperationException = new UnsupportedOperationException("不支持!");
+        unsupportedOperationException.printStackTrace();
     }
     default void logDebug(Object msg)
     {
-        throw new UnsupportedOperationException();
+        UnsupportedOperationException unsupportedOperationException = new UnsupportedOperationException("不支持!");
+        unsupportedOperationException.printStackTrace();
     }
     default void logInfo(Object msg)
     {
-        throw new UnsupportedOperationException();
+        UnsupportedOperationException unsupportedOperationException = new UnsupportedOperationException("不支持!");
+        unsupportedOperationException.printStackTrace();
     }
 
     default void logError(Object msg)
     {
-        throw new UnsupportedOperationException();
+        UnsupportedOperationException unsupportedOperationException = new UnsupportedOperationException("不支持!");
+        unsupportedOperationException.printStackTrace();
     }
 
     default void logWarn(Object msg)
     {
-        throw new UnsupportedOperationException();
+        UnsupportedOperationException unsupportedOperationException = new UnsupportedOperationException("不支持!");
+        unsupportedOperationException.printStackTrace();
     }
 }

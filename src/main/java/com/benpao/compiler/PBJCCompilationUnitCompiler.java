@@ -77,6 +77,11 @@ public class PBJCCompilationUnitCompiler extends PABUnitCompiler implements PIBI
         this.needEnter = needEnter;
     }
 
+    protected void addAllInnerNode(PBInnerNode pbInnerNode){
+        allInnerNodes.add(pbInnerNode);
+        findParentNodeCache.clear();
+    }
+
     public Map<JCTree.JCVariableDecl, VarUsageRange> getUsageRanges()
     {
         return usageRanges;
@@ -175,7 +180,6 @@ public class PBJCCompilationUnitCompiler extends PABUnitCompiler implements PIBI
         PBInnerNode mayBeParent = null;
         for (PBInnerNode innerNode : allInnerNodes)
         {
-
             if (innerNode.asJcTree == jcTree)
             {
                 continue;
@@ -356,6 +360,7 @@ public class PBJCCompilationUnitCompiler extends PABUnitCompiler implements PIBI
     @Override
     protected void parse(JCTree jcTree)
     {
+
         JCTreePosition jcTreePosition = new JCTreePosition(jcTree, asJCCompilationUnit);
         jcTreePositions.add(jcTreePosition);
         compiler.jcTreeMap.put(jcTree, this);
@@ -368,7 +373,7 @@ public class PBJCCompilationUnitCompiler extends PABUnitCompiler implements PIBI
                 compiler.classNodes.add(classNode);
                 rootClasses.add(classNode);
                 sons.add(classNode);
-                allInnerNodes.add(classNode);
+                addAllInnerNode(classNode);
             }
         }
     }

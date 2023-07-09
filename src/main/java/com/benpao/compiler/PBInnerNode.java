@@ -3,7 +3,6 @@ package com.benpao.compiler;
 import com.sun.tools.javac.tree.JCTree;
 
 import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
 
 @SuppressWarnings("unused")
 public abstract class PBInnerNode extends PABUnitCompiler implements PIBInnerClassNodes
@@ -44,7 +43,7 @@ public abstract class PBInnerNode extends PABUnitCompiler implements PIBInnerCla
 
     protected void addPBInnerNode(PBInnerNode pbInnerNode){
         sons.add(pbInnerNode);
-        belongJCCompilationUnitCompiler.allInnerNodes.add(pbInnerNode);
+        belongJCCompilationUnitCompiler.addAllInnerNode(pbInnerNode);
         if (pbInnerNode instanceof PBClassNode){
             PBClassNode classNode = (PBClassNode) pbInnerNode;
             innerClassNodes.add(classNode);

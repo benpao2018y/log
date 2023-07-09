@@ -84,6 +84,8 @@ public class PBLogCompiler extends PABCompiler
         }
         if (!(parentNode instanceof PBClassNodeInnerNode))
         {
+            log(jcMethodInvocation);
+            log(parentNode.getClass());
             return jcMethodInvocation;
         }
         //</editor-fold>
